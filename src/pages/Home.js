@@ -1,6 +1,7 @@
 import useFetch from "../hooks/useFetch";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -19,7 +20,7 @@ function Home() {
                         <div className="card-body">
                             <h3 className="card-title">{blog.title}</h3>
                             <h6>posted by - {blog.author}</h6>
-                            <a className="btn btn-primary btn-sm d-inline" href="">Read More</a>
+                            <Link className="btn btn-primary btn-sm d-inline" to={`/blogs/${blog.id}`}>Read More</Link>
                         </div>
                     </div>
                 </div>
